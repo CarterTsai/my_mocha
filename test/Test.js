@@ -3,8 +3,20 @@
 var assert = require("assert");
 
 describe('Test mocha  ',function() {
+
+    before(function(done) {
+        // Create something before testing
+        // then using done() to finish
+        done();
+    });
+
     it('should equal test',function() {
         assert.equal( 'test', 'test' ); 
+    });
+    
+    it('should equal test with done()',function(done) {
+        assert.equal( 'test', 'test' );
+        done(); 
     });
 
     it('should foo is not bar',function() {
@@ -35,5 +47,15 @@ describe('Test mocha  ',function() {
     
     it('should is deep equal', function(){
         assert.deepEqual({ tea: 'green' }, { tea: 'green' });
+    });
+    
+    it('should is not deep equal', function(){
+        assert.notDeepEqual({ tea: 'green' }, { tea: 'red' });
+    });
+    
+    it('should is True', function(){
+        var teaServed = true;
+        console.log(assert);
+        assert.isTrue(teaServed, 'the tea has been served');
     });
 });
