@@ -1,6 +1,6 @@
 // References : http://chaijs.com/api/assert/
-
-var assert = require("assert");
+var chai = require('chai');
+var assert = chai.assert;
 
 describe('Test mocha  ',function() {
 
@@ -28,10 +28,10 @@ describe('Test mocha  ',function() {
         //assert.ok( false, 'this is fail' ); 
     });
     
-    /* it('should not ok', function(){
-        assert.notOk('everything', 'this will fail');
-         assert.notOk( false , 'this will pass');
-    });*/
+     it('should not ok', function(){
+       // assert.notOk('everything', 'this will fail');
+        assert.notOk( false , 'this will pass');
+    });
 
     it('should not equal', function(){
         assert.notEqual(3,4,'these numbers are not equal');
@@ -51,11 +51,5 @@ describe('Test mocha  ',function() {
     
     it('should is not deep equal', function(){
         assert.notDeepEqual({ tea: 'green' }, { tea: 'red' });
-    });
-    
-    it('should is True', function(){
-        var teaServed = true;
-        console.log(assert);
-        assert.isTrue(teaServed, 'the tea has been served');
     });
 });
