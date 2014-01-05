@@ -10,4 +10,4 @@ test-w:
 		--growl \
 		--watch
 
-.PHONY: test test-w))
+.PHONY: test test-w
